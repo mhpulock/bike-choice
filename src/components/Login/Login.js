@@ -37,7 +37,7 @@ const Login = () => {
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
 
-        fetch("http://localhost:5000/adduser", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/adduser", {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user),
@@ -51,7 +51,7 @@ const Login = () => {
                         icon: 'success',
                         title: 'User Loged in Successfully',
                         showConfirmButton: false,
-                        timer: 4000
+                        timer: 3000
                     })
                 }
                 console.log(res);

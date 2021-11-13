@@ -14,7 +14,7 @@ const Review = () => {
         console.log(data);
 
 
-        fetch("http://localhost:5000/review", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/review", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

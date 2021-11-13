@@ -4,7 +4,7 @@ import Singlereview from '../Singlereview/Singlereview';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getreviews')
+        fetch('https://guarded-ocean-22466.herokuapp.com/getreviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

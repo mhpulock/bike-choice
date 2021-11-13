@@ -1,19 +1,19 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import { Link, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import './Myordersingle.css';
-import Swal from 'sweetalert2';
 
-const Myordersingle = (props) => {
+const Manageproductitem = props => {
     let { path, url } = useRouteMatch();
     const { user } = useAuth();
-    const { _id, img, name, description, price } = props.myorder;
+    const { _id, img, name, description, price } = props.bike;
     // const url = `/dashboard/myorder/${_id}`;
 
     const handleDeleteUser = () => {
         const procced = window.confirm('Are You sure, you want to delete?');
+
         if (procced) {
-            fetch(`https://guarded-ocean-22466.herokuapp.com/dashboard/myorder/${_id}`, {
+            fetch(`https://guarded-ocean-22466.herokuapp.com/dashboard/manageproduct/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -47,4 +47,4 @@ const Myordersingle = (props) => {
     );
 };
 
-export default Myordersingle;
+export default Manageproductitem;

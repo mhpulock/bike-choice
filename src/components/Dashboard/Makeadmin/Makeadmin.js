@@ -12,7 +12,7 @@ const Makeadmin = () => {
     const { reset } = useForm();
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch("http://localhost:5000/adduser/admin", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/adduser/admin", {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user),

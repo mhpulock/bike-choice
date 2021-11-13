@@ -7,7 +7,7 @@ const Myorder = () => {
     const { user } = useAuth();
     const [myorders, setMyorder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myorder/${user.email}`)
+        fetch(`https://guarded-ocean-22466.herokuapp.com/myorder/${user.email}`)
             .then(res => res.json())
             .then(data => setMyorder(data))
     }, [user?.email])

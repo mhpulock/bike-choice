@@ -17,6 +17,7 @@ import Review from '../Review/Review';
 import ManageAllOrde from '../ManageAllOrder/ManageAllOrde';
 import Addproduct from '../Addproduct/Addproduct';
 import Makeadmin from '../Makeadmin/Makeadmin';
+import Manageproduct from '../Manageproduct/Manageproduct';
 
 const Dashboardhome = () => {
     let { path, url } = useRouteMatch();
@@ -56,7 +57,9 @@ const Dashboardhome = () => {
                         <Route path={`${path}/makeadmin`}>
                             <Makeadmin></Makeadmin>
                         </Route>
-
+                        <Route path={`${path}/manageproduct`}>
+                            <Manageproduct></Manageproduct>
+                        </Route>
                     </Switch>
                 </div>
             </div>

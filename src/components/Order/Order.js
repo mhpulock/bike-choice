@@ -26,7 +26,7 @@ const Order = () => {
         console.log(data);
 
 
-        fetch("http://localhost:5000/customerorder", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/customerorder", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -49,7 +49,7 @@ const Order = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch('https://guarded-ocean-22466.herokuapp.com/bikes')
             .then(res => res.json())
             .then(data => {
 

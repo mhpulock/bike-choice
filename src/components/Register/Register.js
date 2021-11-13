@@ -56,7 +56,7 @@ const Register = () => {
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
 
-        fetch("http://localhost:5000/adduser", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/adduser", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(user),

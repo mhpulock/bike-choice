@@ -11,7 +11,7 @@ const Dashboardbar = () => {
     const [admin, setAdmin] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/findadmin/${user?.email}`)
+        fetch(`https://guarded-ocean-22466.herokuapp.com/findadmin/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data[0]?.role == 'admin') {

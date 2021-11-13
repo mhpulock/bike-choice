@@ -10,7 +10,7 @@ const Addproduct = () => {
         console.log(data);
 
 
-        fetch("http://localhost:5000/addbike", {
+        fetch("https://guarded-ocean-22466.herokuapp.com/addbike", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
